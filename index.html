@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Invitation ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="screen active" id="screen1">
+    <div class="card">
+      <div class="emoji">💌</div>
+      <h1>Will you go on a date with me?</h1>
+      <p>I have something special planned for us ❤️</p>
+      <div class="button-group">
+        <button class="main-btn" id="yesBtn">YES ❤️</button>
+        <button class="no-btn" id="noBtn">NO 😭</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="screen2">
+    <div class="card">
+      <div class="emoji">🥰</div>
+      <h1>So... when are you free?</h1>
+      <p>Pick a date and time for our little adventure.</p>
+
+      <div class="form-group">
+        <label for="date">Choose a date</label>
+        <input type="date" id="date">
+      </div>
+
+      <div class="form-group">
+        <label for="time">Choose a time</label>
+        <select id="time">
+          <option value="">Select time</option>
+          <option>12:00 PM</option><option>12:30 PM</option>
+          <option>1:00 PM</option><option>1:30 PM</option>
+          <option>2:00 PM</option><option>2:30 PM</option>
+          <option>3:00 PM</option><option>3:30 PM</option>
+          <option>4:00 PM</option><option>4:30 PM</option>
+          <option>5:00 PM</option><option>5:30 PM</option>
+          <option>6:00 PM</option><option>6:30 PM</option>
+          <option>7:00 PM</option><option>7:30 PM</option>
+          <option>8:00 PM</option>
+        </select>
+      </div>
+
+      <p class="error" id="dateError"></p>
+      <button class="main-btn" id="dateBtn">Set the date! ❤️</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen3">
+    <div class="card">
+      <div class="emoji">🍽️</div>
+      <h1>What are we feeling?</h1>
+      <p>Pick your favorite food for our date.</p>
+
+      <div class="food-grid">
+        <div class="food-card" data-food="Pizza"><span>🍕</span><p>Pizza</p></div>
+        <div class="food-card" data-food="Sushi"><span>🍣</span><p>Sushi</p></div>
+        <div class="food-card" data-food="Burgers"><span>🍔</span><p>Burgers</p></div>
+        <div class="food-card" data-food="Pasta"><span>🍝</span><p>Pasta</p></div>
+        <div class="food-card" data-food="Tacos"><span>🌮</span><p>Tacos</p></div>
+        <div class="food-card" data-food="Ramen"><span>🍜</span><p>Ramen</p></div>
+      </div>
+
+      <p class="error" id="foodError"></p>
+      <button class="main-btn" id="foodBtn">Sounds perfect! ❤️</button>
+    </div>
+  </section>
+<!-- =========================
+     SCREEN 4 - MOVIES
+========================== -->
+
+<section class="screen" id="screen4">
+
+    <div class="card">
+
+        <div class="emoji">🎬</div>
+
+        <h1>What's on our watchlist?</h1>
+
+        <p>
+            Add your favorite movies you'd love
+            to watch together. 🍿
+        </p>
+
+        <div class="movie-input">
+
+            <input
+                type="text"
+                id="movieInput"
+                placeholder="Enter a movie name..."
+            >
+
+            <button class="add-btn" id="addMovieBtn">
+                + Add
+            </button>
+
+        </div>
+
+        <div class="movie-list" id="movieList"></div>
+
+        <p class="error" id="movieError"></p>
+
+        <button class="main-btn" id="movieBtn">
+            Movies sorted! 🎬❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCREEN 5 - BUCKET LIST
+========================== -->
+
+<section class="screen" id="screen5">
+
+    <div class="card">
+
+        <div class="emoji">🎨</div>
+
+        <h1>Our Little Bucket List</h1>
+
+        <p>
+            Three things we'd love to do together... ❤️
+        </p>
+
+        <div class="bucket-input">
+
+            <input
+                type="text"
+                id="bucket1"
+                placeholder="Something we'd love to do..."
+            >
+
+            <input
+                type="text"
+                id="bucket2"
+                placeholder="Another little dream..."
+            >
+
+            <input
+                type="text"
+                id="bucket3"
+                placeholder="One more adventure..."
+            >
+
+        </div>
+
+        <p class="error" id="bucketError"></p>
+
+        <button class="main-btn" id="bucketBtn">
+            Save Our List ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCREEN 6 - CONFIRMATION
+========================== -->
+
+<section class="screen" id="screen6">
+
+    <div class="card final-card">
+
+        <div class="emoji">🥰</div>
+
+        <h1>It's a Date! ❤️</h1>
+
+        <p class="big-message">
+            Looks like we've got a date! ✨
+        </p>
+
+        <p>
+            You picked the day, the time,
+            the food and even the movies...
+            I'll take care of the rest. 😉
+        </p>
+
+        <div class="details">
+
+            <div>
+                <strong>📅 Date</strong>
+                <span id="finalDate"></span>
+            </div>
+
+            <div>
+                <strong>⏰ Time</strong>
+                <span id="finalTime"></span>
+            </div>
+
+            <div>
+                <strong>🍽️ Food</strong>
+                <span id="finalFood"></span>
+            </div>
+
+        </div>
+
+        <button class="main-btn" id="acceptBtn">
+            OK, I ACCEPT 🥰
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCREEN 7 - WILL YOU COME?
+========================== -->
+
+<section class="screen" id="screen7">
+
+    <div class="card special-card">
+
+        <div class="emoji">🌙</div>
+
+        <h1>All that's missing is you.</h1>
+
+        <p class="big-message">
+            Will you come? ❤️
+        </p>
+
+        <button class="main-btn" id="comeBtn">
+            Of course I will 🥰
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCREEN 8 - FINAL
+========================== -->
+
+<section class="screen" id="screen8">
+
+    <div class="card final-message">
+
+        <div class="emoji">❤️</div>
+
+        <h1>Let's make a memory</h1>
+
+        <p class="big-message">
+            we'll smile about later.
+        </p>
+
+        <div class="heart">
+            💕
+        </div>
+
+        <p class="small-message">
+            See you soon... ✨
+        </p>
+
+    </div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>
